@@ -30,5 +30,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         'postgres' => ['postgres1', 'postgres2'],
         'pgpool'   => ['pgpool'],
       }
+    end
   end
 end
