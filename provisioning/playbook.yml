@@ -2,5 +2,8 @@
 - name:  Configuración inicial de los equipos
   hosts: all
 
+  roles:
+    - common
+
 - include: postgres.yml
 - include: pgpool.yml

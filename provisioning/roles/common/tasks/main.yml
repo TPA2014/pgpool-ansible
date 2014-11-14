@@ -1,0 +1,6 @@
+---
+- name:     Configuración de /etc/hosts
+  template: src=hosts.j2 dest=/etc/hosts owner=root group=root mode=0644 
+
+- name: Sincronización del listado de paquetes de APT
+  apt:  update-cache=yes cache_valid_time=86400
