@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     machine.vm.network 'private_network', ip: '192.168.99.10'
     machine.vm.network 'forwarded_port', guest: 5432, host: 5432
 
-    machine.provision 'ansible' do |ansible|
+    machine.vm.provision 'ansible' do |ansible|
       ansible.playbook = 'provisioning/playbook.yml'
       ansible.limit    = 'all'
       ansible.sudo     = true
