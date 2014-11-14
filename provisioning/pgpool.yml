@@ -1,0 +1,5 @@
+---
+- name:  Configuración de máquinas con pgPool-II
+  hosts: pgpool
+  roles:
+    - pgpool

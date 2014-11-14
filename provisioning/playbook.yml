@@ -1,0 +1,6 @@
+---
+- name:  Configuración inicial de los equipos
+  hosts: all
+
+- include: postgres.yml
+- include: pgpool.yml

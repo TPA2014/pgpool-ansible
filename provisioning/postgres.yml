@@ -1,0 +1,5 @@
+---
+- name:  Configuración de máquinas con PostgreSQL
+  hosts: postgres
+  roles:
+    - postgres
