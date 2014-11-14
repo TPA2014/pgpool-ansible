@@ -1,3 +1,10 @@
 ---
 - name: Instalación de pgPool-II
   apt:  name=pgpool2 state=latest
+
+- name: Configuración de pgPool
+  template: src={{ item }}.j2 dest=/etc/pgpool2/{{ item }} owner=root group=root mode=0644
+  with_items:
+    - pcp.conf
+    - pgpool.conf
+    - pool_hba.conf
